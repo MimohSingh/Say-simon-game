@@ -1,0 +1,90 @@
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.btn_container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    height: 200px;
+    width: 200px;
+    border-radius: 20%;
+    border: solid 10px black;
+    margin: 1.5rem;
+}
+
+.red {
+    background-color: rgb(196, 84, 106);
+}
+
+.yellow {
+    background-color: khaki;
+}
+
+.green {
+    background-color: lightgreen;
+}
+
+.purple {
+    background-color: rgb(87, 131, 167);
+}
+
+.flash {
+    background-color: white;
+}
+
+.userflash {
+    background-color: lawngreen;
+}
+
+.content {
+    transition: filter 0.3s;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+.overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height:100px;
+    weight:100px;
+    font-size: 4rem;
+}
+.explosion {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: url('explosion.png') no-repeat center center;
+    background-size: cover;
+    display: none;
+    animation: explode 1s forwards;
+}
+
+@keyframes explode {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(10);
+        opacity: 0;
+    }
+}
